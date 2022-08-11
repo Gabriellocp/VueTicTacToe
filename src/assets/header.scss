@@ -1,0 +1,19 @@
+@import "../assets/colors.scss";
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background: linear-gradient(
+        to right,
+        $primary,
+        $secondary
+    );
+    background-size: 300%;
+    background-position: left;
+    transition: background-position 300ms;
+    min-height: 30px;
+    &:hover {
+        background-position: right;
+    }
+}

@@ -1,0 +1,32 @@
+@import "../assets/colors.scss";
+
+.square {
+    padding: 1rem;
+    margin: .5em;
+    height: calc(30px + .5em);
+    width: calc(30px + .5em);
+    text-align: center;
+    background-image: linear-gradient(
+        to right,
+        $primary,
+        $secondary
+    );
+    color: white;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-size: 300%;
+    animation: bgchange 5s linear infinite alternate;
+    border-radius: 10px;
+    &:hover {
+        box-shadow: 10px 10px 10px rgba(0,0,0,.3);
+    }
+    &.not-marked{
+        cursor: pointer;
+    }
+}
+
+@keyframes bgchange {
+    100%{
+        background-position: right;
+    }
+}

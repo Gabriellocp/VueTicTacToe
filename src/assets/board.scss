@@ -1,0 +1,55 @@
+@import "../assets/colors.scss";
+.board-page {
+    margin: 2vh 10vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+   
+    
+    .board{
+    margin-top: calc(15vh);
+    display: grid;
+    grid-template-columns: repeat(3,auto);
+    align-self: center;
+    }
+   
+   
+}
+
+.game-over {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    text-align: center;
+    flex-grow: 1;
+    .new-game {
+        color: white;
+        padding: 10px;
+        margin-top: 18px;
+        background-image: linear-gradient(
+            to left,
+            $primary,
+            $secondary
+        );
+        border-radius: 10px;
+        box-shadow: 1px 2px 1px rgba(0,0,0,.5) ;
+        border: none;
+        transition: box-shadow 3s;
+
+        &:hover {
+            box-shadow: 5px 5px 5px ;
+        }
+    }
+}
+.custom-span{
+    text-transform: uppercase;
+    background-image: linear-gradient(
+        45deg,
+        $primary,
+        $secondary
+    );
+    -webkit-background-clip: text;
+    color: transparent;
+}
